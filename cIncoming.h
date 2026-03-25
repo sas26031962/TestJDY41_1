@@ -239,10 +239,10 @@ void cIncoming::execute()
     }//End of if(Command == "Reset")
     //------------------------------------------------------
     
-    if(Command == "ConfigMode")
+    if(Command == "ConfigRole")
     {
       //Подготовка команды ConfigMode
-      SendInstance.prepareConfigMode();
+      SendInstance.prepareConfigRole();
       
       Answer += "ConfigMode JDY-41";
       this->IsValid = true;

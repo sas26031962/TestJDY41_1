@@ -65,7 +65,7 @@ public:
 
  void prepareReset();
  void prepareConfigId();
- void prepareConfigMode();
+ void prepareConfigRole();
  void prepareGetVersion();
  void prepareSendFrame(String s);
  
@@ -164,11 +164,11 @@ void cSend::prepareConfigId()
 }//End of void cSend::prepareConfigId()
 
 
-void cSend::prepareConfigMode()
+void cSend::prepareConfigRole()
 {
-  Buffer[0] = 0x55;
-  Buffer[1] = 0x01;
-  Buffer[2] = 0x00;
+  Buffer[0] = 0xA9;
+  Buffer[1] = 0xE3;
+  Buffer[2] = 0xA0;
   Buffer[3] = 0x0D;
   Buffer[4] = 0x0A;
 
@@ -176,7 +176,7 @@ void cSend::prepareConfigMode()
   IsConfigMode = true;
   IsFrame = true;
     
-}//End of void cSend::prepareConfigMode()
+}//End of void cSend::prepareConfigRole()
 
 void cSend::prepareGetVersion()
 {
