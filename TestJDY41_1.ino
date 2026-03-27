@@ -38,7 +38,12 @@ void setup()
 
   digitalWrite(CS, HIGH);
   digitalWrite(LED_2, LOW);
+
+  delay(2000);
   
+  digitalWrite(CS, LOW);
+  digitalWrite(LED_2, HIGH);
+
 }//End of void setup()
 
 void loop() 
